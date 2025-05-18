@@ -5,14 +5,14 @@ import ServiceCard from "./components/ServiceCard.astro";
 import ServiceCopyTextCard from "./components/ServiceCopyTextCard.astro";
 import { servicesSectionData } from "./data.ts";
 
-export interface Props {
+interface Props {
   className?: string;
 }
 
 const { className } = Astro.props;
 ---
 
-<section id="services" class=`${className}`>
+<section id="services" class={`${className}`}>
   <Container size="wide">
     <Title2>{servicesSectionData.title}</Title2>
   </Container>

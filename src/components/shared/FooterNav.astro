@@ -1,13 +1,13 @@
 ---
-export interface Props{
-    title:string,
-    navItems:{
-        itemText:string,
-        itemLink:string
-    }[]
+interface Props {
+    title: string;
+    navItems: {
+        itemText: string;
+        itemLink: string;
+    }[];
 }
 
-const {title, navItems} = Astro.props
+const { title, navItems } = Astro.props;
 ---
 
 <nav class="space-y-6">
@@ -15,14 +15,12 @@ const {title, navItems} = Astro.props
         {title}
     </h2>
     <ul class="space-y-3 font-medium md:text-lg text-heading-3">
-        {navItems.map((navItem)=>(
+        {navItems.map((navItem) => (
             <li>
                 <a href={navItem.itemLink} class="transition hover:text-primary">
                     {navItem.itemText}
                 </a>
             </li>
-        ))
-
-        }
+        ))}
     </ul>
 </nav>

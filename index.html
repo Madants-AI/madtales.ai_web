@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madtales AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SVG Decorative Background -->
+    <svg class="bg-svg" width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="aiGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFB86B" stop-opacity="0.12"/>
+                <stop offset="100%" stop-color="#FFD9B3" stop-opacity="0.08"/>
+            </linearGradient>
+        </defs>
+        <ellipse cx="720" cy="160" rx="900" ry="180" fill="url(#aiGradient)"/>
+    </svg>
+
+    <!-- Minimal Navbar -->
+    <nav class="navbar minimal-navbar">
+        <div class="nav-brand">Madtales AI</div>
+        <div class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#vision">Vision</a>
+            <a href="#stories">Stories</a>
+            <a href="#insights">Insights</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero minimal-hero hero-bg-image">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-main minimal-hero-main">
+            <div class="hero-content minimal-hero-content">
+                <h1>AI, Reimagined</h1>
+                <p class="subtitle">Minimal. Powerful. Human-centric.</p>
+            </div>
+            <svg class="hero-accent-svg" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="36" stroke="#FFB86B" stroke-width="2" fill="none" opacity="0.18"/>
+                <circle cx="40" cy="40" r="20" stroke="#FFB86B" stroke-width="2" fill="none" opacity="0.12"/>
+            </svg>
+        </div>
+        <div style="height: 80px;"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About Madtales AI</h2>
+            <p class="section-subtitle">The Intelligence Collective</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <img src="https://images.unsplash.com/photo-1717501220725-83f151c447e7?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About AI 1"/>
+                <div class="about-card-content">
+                    <h3>Who We Are</h3>
+                    <p>Madtales AI is a hub for thinkers, engineers, and dreamers. We are dedicated to the pursuit of artificial intelligence that augments, inspires, and empowers.</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <img src="https://images.unsplash.com/photo-1717501218636-a390f9ac5957?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About AI 2"/>
+                <div class="about-card-content">
+                    <h3>Our Mission</h3>
+                    <p>We believe the future is shaped by those who ask new questions, build new tools, and imagine new realities. Our team works at the intersection of data, algorithms, and creativity to unlock the next generation of AI-driven experiences.</p>
+                </div>
+            </div>
+            <div class="about-card">
+                <img src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=3250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About AI 3"/>
+                <div class="about-card-content">
+                    <h3>Our Approach</h3>
+                    <p>We value curiosity, collaboration, and ethical innovation. Our journey is one of continuous learning and bold exploration.</p>
+                </div>
+            </div>
+        </div>
+        <svg class="divider-svg" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z" fill="#181818"/>
+        </svg>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>AI Features</h2>
+            <p class="section-subtitle">What We Build</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#FFB86B" fill-opacity="0.15"/><path d="M24 12v12l8 4" stroke="#FFB86B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <h3>Real-Time AI</h3>
+                <p>Systems that sense, interpret, and act in the world—instantly.</p>
+                <img src="https://images.unsplash.com/photo-1717501218661-0322e4bc4c81?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Feature 1"/>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="8" fill="#FFB86B" fill-opacity="0.15"/><path d="M16 24h16M24 16v16" stroke="#FFB86B" stroke-width="2" stroke-linecap="round"/></svg>
+                <h3>Generative Models</h3>
+                <p>AI that creates: text, images, music, and more—fueling creativity and innovation.</p>
+                <img src="https://images.unsplash.com/photo-1717501218456-c4789b65fc21?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Feature 2"/>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="20" ry="10" fill="#FFB86B" fill-opacity="0.15"/><path d="M12 24c0-6.627 5.373-12 12-12s12 5.373 12 12-5.373 12-12 12S12 30.627 12 24z" stroke="#FFB86B" stroke-width="2"/></svg>
+                <h3>Conversational AI</h3>
+                <p>Natural, adaptive dialogue systems for support, learning, and connection.</p>
+                <img src="https://images.unsplash.com/photo-1682159672286-40790338349b?q=80&w=3058&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Feature 3"/>
+            </div>
+            <div class="feature-card">
+                <svg class="feature-icon" width="48" height="48" viewBox="0 0 48 48"><polygon points="24,4 44,44 4,44" fill="#FFB86B" fill-opacity="0.15"/><path d="M24 4v40" stroke="#FFB86B" stroke-width="2" stroke-linecap="round"/></svg>
+                <h3>Vision & Perception</h3>
+                <p>AI that sees, understands, and interacts with the environment.</p>
+                <img src="https://images.unsplash.com/photo-1614891040272-ac3235043a7b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2FtZXJhJTIwZXllfGVufDB8fDB8fHwy" alt="Feature 4"/>
+            </div>
+        </div>
+        <svg class="divider-svg" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,80 Q720,0 1440,80 L1440,0 L0,0 Z" fill="#181818"/>
+        </svg>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="vision">
+        <div class="section-header">
+            <h2>Our Vision</h2>
+            <p class="section-subtitle">A New Era of Intelligence</p>
+        </div>
+        <div class="vision-cards">
+            <div class="vision-card">
+                <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#FFB86B" fill-opacity="0.12"/><path d="M20 10v10l6 3" stroke="#FFB86B" stroke-width="2" stroke-linecap="round"/></svg>
+                <h3>Human-Centric</h3>
+                <p>We build AI that amplifies human potential and brings new meaning to technology.</p>
+                <img src="https://images.unsplash.com/photo-1530695440407-21fef47230b1?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vision 1"/>
+            </div>
+            <div class="vision-card">
+                <svg width="40" height="40" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" fill="#FFB86B" fill-opacity="0.12"/><path d="M14 20h12M20 14v12" stroke="#FFB86B" stroke-width="2"/></svg>
+                <h3>Transparent</h3>
+                <p>Our systems are designed to be open, explainable, and trustworthy.</p>
+                <img src="https://images.unsplash.com/photo-1508882100003-8ae16a4abbaf?q=80&w=3121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vision 2"/>
+            </div>
+            <div class="vision-card">
+                <svg width="40" height="40" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="18" ry="9" fill="#FFB86B" fill-opacity="0.12"/><path d="M10 20c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10S10 25.523 10 20z" stroke="#FFB86B" stroke-width="2"/></svg>
+                <h3>Adaptive</h3>
+                <p>We create systems that learn, adapt, and evolve with the world around them.</p>
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q29tcHV0ZXJzfGVufDB8fDB8fHwy" alt="Vision 3"/>
+            </div>
+        </div>
+        <svg class="divider-svg" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z" fill="#232526"/>
+        </svg>
+    </section>
+
+    <!-- Stories Section -->
+    <section id="stories" class="stories">
+        <div class="section-header">
+            <h2>AI Stories</h2>
+            <p class="section-subtitle">Intelligence in Action</p>
+        </div>
+        <div class="stories-grid">
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1737471409263-f923c6b53275?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Story 1"/>
+                <div class="story-card-content">
+                    <h3>Urban Mobility</h3>
+                    <p>Adaptive AI reimagines how cities move, optimizing flow and reducing congestion.</p>
+                </div>
+            </div>
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Story 2"/>
+                <div class="story-card-content">
+                    <h3>Network Intelligence</h3>
+                    <p>Self-learning networks that optimize and heal in real time, powering the digital world.</p>
+                </div>
+            </div>
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1616161560417-66d4db5892ec?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fEFJfGVufDB8fDB8fHwy" alt="Story 3"/>
+                <div class="story-card-content">
+                    <h3>Personalization</h3>
+                    <p>Deep learning delivers experiences tailored to every individual, at scale.</p>
+                </div>
+            </div>
+        </div>
+        <svg class="divider-svg" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,80 Q720,0 1440,80 L1440,0 L0,0 Z" fill="#181818"/>
+        </svg>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="insights">
+        <div class="section-header">
+            <h2>Insights</h2>
+            <p class="section-subtitle">Reflections on Intelligence</p>
+        </div>
+        <div class="insights-grid">
+            <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1674027215016-0a4abfdbf1cc?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Insight 1"/>
+                <div class="insight-card-content">
+                    <h3>AI & Creativity</h3>
+                    <p>Exploring the intersection of artificial intelligence and human imagination.</p>
+                </div>
+            </div>
+            <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1718241905696-cb34c2c07bed?q=80&w=3028&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Insight 2"/>
+                <div class="insight-card-content">
+                    <h3>Ethics in AI</h3>
+                    <p>How do we build systems that are fair, transparent, and trustworthy?</p>
+                </div>
+            </div>
+            <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1680783954745-3249be59e527?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Insight 3"/>
+                <div class="insight-card-content">
+                    <h3>Collaboration</h3>
+                    <p>Human-AI partnerships that unlock new forms of progress and understanding.</p>
+                </div>
+            </div>
+        </div>
+        <svg class="divider-svg" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 Q720,80 1440,0 L1440,80 L0,80 Z" fill="#232526"/>
+        </svg>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact minimal-contact">
+        <div class="contact-main minimal-contact-main">
+            <div class="contact-card minimal-contact-card">
+                <svg class="contact-icon" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#FFB86B" fill-opacity="0.15"/><path d="M16 20l8 8 8-8" stroke="#FFB86B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <h2>Contact</h2>
+                <p>contact@madtalesai.com</p>
+                <a href="mailto:contact@madtalesai.com" class="contact-button">
+                    <i class="fas fa-paper-plane"></i>
+                    Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Madtales AI.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

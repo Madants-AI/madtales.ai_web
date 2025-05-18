@@ -19,13 +19,23 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout your repository
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
+
+      - name: Install dependencies and build
         uses: withastro/action@v3
         with:
           node-version: 20
           package-manager: pnpm@latest
+
+      - name: Disable Jekyll on GitHub Pages
+        run: touch dist/.nojekyll
+
+      - name: Upload build output
+        uses: actions/upload-artifact@v3
+        with:
+          name: astro-dist
+          path: dist
 
   deploy:
     name: Deploy
@@ -35,6 +45,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Download build output
+        uses: actions/download-artifact@v3
+        with:
+          name: astro-dist
+          path: dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          folder: dist

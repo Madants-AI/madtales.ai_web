@@ -22,11 +22,17 @@ jobs:
       - name: Checkout your repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies and build
-        uses: withastro/action@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          package-manager: pnpm@latest
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with Astro
+        run: npm run build
 
       - name: Disable Jekyll on GitHub Pages
         run: touch dist/.nojekyll

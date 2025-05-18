@@ -6,5 +6,5 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [tailwind(), react()],
   site: "https://madtalesai.github.io",
-  base: "/madtales.ai_web",
+  base: "/madtales.ai_web/",
 });

@@ -474,6 +474,8 @@
     min-height: 400px; /* ensures visible background */
     overflow: hidden;
     z-index: 3;
+    top: -20vh; /* Moves content up by one-third of the viewport height */
+
 }
 
         .about-tiles {
@@ -642,11 +644,17 @@
         }
 
         /* Features Section */
+
+        #features{
+            position: relative;
+    top: -20vh;
+        }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
             margin-top: 4rem;
+            
         }
 
         .feature-card {
@@ -700,6 +708,8 @@
             background: var(--bg-primary);
             position: relative;
             overflow: hidden;
+            position: relative;
+    top: -20vh;
         }
 
         .vision::before {
@@ -842,6 +852,8 @@
             border-top: 1px solid var(--border-light);
             position: relative;
             overflow: hidden;
+            position: relative;
+    top: -20vh;
         }
 
         .stories::before {
@@ -989,6 +1001,8 @@
             position: relative;
             overflow: hidden;
             z-index: 3;
+            position: relative;
+    top: -20vh;
         }
 
         .insights::before {
@@ -1177,6 +1191,8 @@
             background: var(--bg-secondary);
             text-align: center;
 
+            position: relative;
+    top: -20vh;
             border-top: 1px solid var(--border-light);
         }
 
@@ -1231,6 +1247,8 @@
             border-top: 1px solid var(--border-light);
             color: var(--text-dim);
             font-size: 0.95rem;
+            top:-20vh;
+            bottom: -25vh;
         }
 
         /* Animations */

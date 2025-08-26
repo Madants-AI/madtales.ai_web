@@ -1176,11 +1176,12 @@
         .contact {
             background: var(--bg-secondary);
             text-align: center;
+
             border-top: 1px solid var(--border-light);
         }
 
         .contact-card {
-            max-width: 600px;
+            /* max-width: 600px; */
             margin: 0 auto;
             background: var(--gradient-card);
             border: 1px solid var(--border-light);
@@ -1203,6 +1204,7 @@
 
         .contact-email {
             display: inline-flex;
+            flex-direction: row;
             align-items: center;
             gap: 0.5rem;
             padding: 1.5rem 3rem;
@@ -1349,4 +1351,36 @@
 
 .about, .stories, .contact {
     padding: 80px 6vw;  
+}
+.contact-buttons {
+    display: flex;
+    justify-content: flex-start;  /* align to the left */
+    gap: 1.5rem;                  /* space between buttons */
+    margin-top: 2rem;
+    overflow-x: auto;             /* enable horizontal scroll if needed */
+    white-space: nowrap;          /* prevent wrapping */
+    padding: 15px 
+            /* space for scroll bar */
+}
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 3rem;
+    background: var(--gradient-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;               /* prevent shrinking when scrolling */
+}
+
+
+
+.contact-email:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  border-color: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
 }

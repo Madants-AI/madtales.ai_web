@@ -1187,14 +1187,14 @@
         }
 
         /* Contact Section */
-        .contact {
-            background: var(--bg-secondary);
-            text-align: center;
+       .contact {
+    background: var(--bg-secondary);
+    text-align: center;
+    position: relative;
+    border-top: 1px solid var(--border-light);
+    margin-top: 6rem;
+}
 
-            position: relative;
-    top: -20vh;
-            border-top: 1px solid var(--border-light);
-        }
 
         .contact-card {
             /* max-width: 600px; */
@@ -1402,3 +1402,7 @@
   background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
   border-color: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
 }
+.section {
+    padding-bottom: 160px;
+}
+

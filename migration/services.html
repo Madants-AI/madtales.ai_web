@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights — Madtales AI</title>
+
+  <link rel="icon" href="MADTALES LOGO.jpeg" />
+  <link rel="stylesheet" href="services.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="bg-decoration"></div>
+
+<div class="particles">
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+
+<div class="glow-orb glow-orb-1"></div>
+<div class="glow-orb glow-orb-2"></div>
+
+<!-- NAVBAR -->
+      <nav class="navbar">
+        <a href="#home" class="nav-brand">
+    <img src="madtales-logo.png" alt="Madtales AI Logo" class="logo">
+    MADTALES AI
+</a>
+        <div class="nav-right">
+            <div class="nav-links" id="navLinks">
+<a href="about.html">About</a>
+      <a href="solutions.html">Industry Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- HERO -->
+<section class="main">
+  <div class="main-content fade-in">
+    <h1 class="main-title">
+      Our <span class="main-highlight">Services</span>
+    </h1>
+    <p class="main-subtitle">
+      Production-grade engineering and AI services built to operate under
+      real-world constraints — not lab conditions.
+    </p>
+  </div>
+</section>
+
+
+<!-- INSIGHTS -->
+<section class="insights">
+  <div class="insights-grid">
+
+    <!-- Software & AI Services -->
+    <div class="insight-card fade-in">
+      <h3>Software & AI Services</h3>
+      <p>
+        We design and deploy AI systems across voice, vision, and data —
+        from model development to optimization and production rollout.
+      </p>
+      <p>
+        <strong>Capabilities:</strong> Voice & Audio AI, Computer Vision,
+        Predictive Analytics, Model Development & Optimization
+      </p>
+    </div>
+
+    <!-- Embedded & Edge Systems -->
+    <div class="insight-card fade-in">
+      <h3>Embedded & Edge Systems</h3>
+      <p>
+        Intelligence belongs closer to where data is generated. We build
+        embedded and edge systems optimized for performance, power, and reliability.
+      </p>
+      <p>
+        <strong>Capabilities:</strong> MCUs, SoCs, FPGA, ASIC, RTOS,
+        Firmware, Drivers, Edge AI Inference
+      </p>
+    </div>
+
+    <!-- Wireless & Connectivity -->
+    <div class="insight-card fade-in">
+      <h3>Wireless & Connectivity</h3>
+      <p>
+        Connected systems fail without robust communication layers.
+        We engineer wireless solutions across short-range and cellular technologies.
+      </p>
+      <p>
+        <strong>Capabilities:</strong> 4G / 5G / LTE / NB-IoT,
+        WiFi, Bluetooth, Zigbee, LoRa, RF Design & Validation
+      </p>
+    </div>
+
+    <!-- Consulting & Advisory -->
+    <div class="insight-card fade-in">
+      <h3>Consulting & Advisory</h3>
+      <p>
+        Strategic clarity accelerates execution. We work with teams to
+        define architectures, assess feasibility, and plan scalable AI systems.
+      </p>
+      <p>
+        <strong>Capabilities:</strong> Architecture Design, Feasibility Studies,
+        AI Roadmaps, System Optimization
+      </p>
+    </div>
+
+    <!-- Key Framing -->
+    <div class="insight-card fade-in">
+      <h3>How We Work</h3>
+      <p>
+        We operate with full ownership — from problem definition to
+        deployment — building systems meant to survive real usage, not demos.
+      </p>
+      <p>
+        <strong>Principles:</strong> End-to-end ownership, production-grade
+        delivery, engineered for power, latency, and privacy constraints
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <p>&copy; 2025 Madtales AI.</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

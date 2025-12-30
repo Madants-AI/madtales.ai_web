@@ -1,714 +1,205 @@
-
-        :root {
-            --primary: #8b5cf6;
-            --primary-dark: #7c3aed;
-            --accent: #06b6d4;
-            --text: #ffffff;
-            --text-muted: #94a3b8;
-            --text-dim: #64748b;
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #334155;
-            --border: #475569;
-            --border-light: rgba(71, 85, 105, 0.3);
-            --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
-            --gradient-card: linear-gradient(145deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-main);
-            background: var(--bg-primary);
-            color: var(--text);
-            line-height: 1.6;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        /* Background Elements */
-        .bg-decoration {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        /* Floating Particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.6;
-            filter: blur(0.5px);
-        }
-
-        .particle:nth-child(1) {
-            width: 4px;
-            height: 4px;
-            background: rgba(139, 92, 246, 0.8);
-            animation: float1 15s infinite linear;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .particle:nth-child(2) {
-            width: 6px;
-            height: 6px;
-            background: rgba(6, 182, 212, 0.7);
-            animation: float2 20s infinite linear;
-            left: 25%;
-            animation-delay: -5s;
-        }
-
-        .particle:nth-child(3) {
-            width: 3px;
-            height: 3px;
-            background: rgba(139, 92, 246, 0.9);
-            animation: float3 18s infinite linear;
-            left: 40%;
-            animation-delay: -10s;
-        }
-
-        .particle:nth-child(4) {
-            width: 5px;
-            height: 5px;
-            background: rgba(6, 182, 212, 0.6);
-            animation: float1 22s infinite linear;
-            left: 55%;
-            animation-delay: -15s;
-        }
-
-        .particle:nth-child(5) {
-            width: 4px;
-            height: 4px;
-            background: rgba(139, 92, 246, 0.7);
-            animation: float2 16s infinite linear;
-            left: 70%;
-            animation-delay: -7s;
-        }
-
-        @keyframes float1 {
-            0% {
-                transform: translateY(100vh) translateX(0px) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-20vh) translateX(50px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes float2 {
-            0% {
-                transform: translateY(100vh) translateX(0px) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(-20vh) translateX(-30px) rotate(-360deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes float3 {
-            0% {
-                transform: translateY(100vh) translateX(0px) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.5;
-            }
-            50% {
-                transform: translateY(50vh) translateX(20px) rotate(180deg);
-            }
-            90% {
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(-20vh) translateX(-20px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* Glow Effects */
-        .glow-orb {
-            position: fixed;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: -1;
-            filter: blur(80px);
-            opacity: 0.3;
-        }
-
-        .glow-orb-1 {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
-            top: 20%;
-            right: 10%;
-            animation: glowMove1 20s ease-in-out infinite;
-        }
-
-        .glow-orb-2 {
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
-            bottom: 30%;
-            left: 15%;
-            animation: glowMove2 25s ease-in-out infinite;
-        }
-
-        @keyframes glowMove1 {
-            0%, 100% {
-                transform: translateX(0px) translateY(0px) scale(1);
-            }
-            25% {
-                transform: translateX(-50px) translateY(-30px) scale(1.1);
-            }
-            50% {
-                transform: translateX(-30px) translateY(40px) scale(0.9);
-            }
-            75% {
-                transform: translateX(20px) translateY(-20px) scale(1.05);
-            }
-        }
-
-        @keyframes glowMove2 {
-            0%, 100% {
-                transform: translateX(0px) translateY(0px) scale(1);
-            }
-            20% {
-                transform: translateX(40px) translateY(-25px) scale(1.2);
-            }
-            40% {
-                transform: translateX(-20px) translateY(-40px) scale(0.8);
-            }
-            60% {
-                transform: translateX(30px) translateY(20px) scale(1.1);
-            }
-            80% {
-                transform: translateX(-10px) translateY(35px) scale(0.95);
-            }
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-light);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 6vw;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: -0.025em;
-        }
-
-        .nav-brand .logo {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            object-fit: cover;
-            margin-right: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.25s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--text);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            padding: 0.75rem 1.5rem;
-            background: var(--gradient-primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
-        }
-
-        /* main Section */
-        .main {
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 120px 6vw 80px 6vw;
-            position: relative;
-            text-align: center;
-        }
-
-        .main-content {
-            max-width: 800px;
-            z-index: 2;
-        }
-
-        .main-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .main-title {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-        }
-
-        .main-subtitle {
-            font-size: clamp(1.1rem, 3vw, 1.4rem);
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-weight: 300;
-            line-height: 1.4;
-        }
-
-        .main-highlight {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Products Section */
-        .products {
-            padding: 80px 6vw;
-            position: relative;
-        }
-
-        .products-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* Left Side - Text Content */
-        .product-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .product-content h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 2rem;
-            color: var(--text);
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-        }
-
-        .product-description {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 3rem;
-        }
-
-        .product-features {
-            margin-bottom: 3rem;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: var(--gradient-card);
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateX(10px);
-            border-color: rgba(139, 92, 246, 0.3);
-            background: linear-gradient(145deg, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.08) 100%);
-        }
-
-        .feature-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient-primary);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .feature-text {
-            flex: 1;
-        }
-
-        .feature-text h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 0.25rem;
-        }
-
-        .feature-text p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .product-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            background: var(--gradient-primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
-        }
-
-        .product-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-        }
-
-        /* Right Side - Media Section */
-        .product-media {
-            position: relative;
-        }
-
-        /* Image Carousel */
-        .carousel-container {
-            position: relative;
-            margin-bottom: 3rem;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .carousel {
-            position: relative;
-            width: 100%;
-            height: 350px;
-            overflow: hidden;
-        }
-
-        .carousel-slides {
-            display: flex;
-            width: 400%;
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide {
-            width: 25%;
-            height: 100%;
-            position: relative;
-            background: var(--bg-card);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--text);
-        }
-
-        .carousel-slide:nth-child(1) {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(6, 182, 212, 0.2));
-        }
-
-        .carousel-slide:nth-child(2) {
-            background: linear-gradient(135deg, rgba(6, 182, 212, 0.3), rgba(139, 92, 246, 0.2));
-        }
-
-        .carousel-slide:nth-child(3) {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.4), rgba(30, 41, 59, 0.3));
-        }
-
-        .carousel-slide:nth-child(4) {
-            background: linear-gradient(135deg, rgba(6, 182, 212, 0.4), rgba(30, 41, 59, 0.3));
-        }
-
-        .carousel-controls {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-dot.active {
-            background: var(--primary);
-            transform: scale(1.2);
-        }
-
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid var(--border-light);
-            color: var(--text);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .carousel-nav:hover {
-            background: rgba(139, 92, 246, 0.8);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .carousel-prev {
-            left: 15px;
-        }
-
-        .carousel-next {
-            right: 15px;
-        }
-
-        /* Video Section */
-        .video-container {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            background: var(--bg-card);
-            border: 1px solid var(--border-light);
-        }
-
-
-
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .products-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .product-content h2 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 0 4vw;
-            }
-
-            .products {
-                padding: 60px 4vw;
-            }
-
-            .main {
-                padding: 120px 4vw 60px 4vw;
-            }
-
-            .product-content h2 {
-                font-size: 2rem;
-            }
-
-            .carousel {
-                height: 280px;
-            }
-
-        }
-
-        /* Fade in animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* MT100 Section Enhancements */
-
-.mt100-value-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.mt100-value {
-  padding: 1rem 1.25rem;
-  border-radius: 12px;
-  background: linear-gradient(
-    145deg,
-    rgba(139, 92, 246, 0.15),
-    rgba(6, 182, 212, 0.08)
-  );
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.mt100-value:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
-}
-
-/* Right-side visual card */
-
-.mt100-visual {
-  padding: 3rem;
-  border-radius: 20px;
-  background: linear-gradient(
-    145deg,
-    rgba(6, 182, 212, 0.15),
-    rgba(139, 92, 246, 0.1)
-  );
-  border: 1px solid rgba(6, 182, 212, 0.35);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.mt100-visual h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.mt100-visual ul {
-  list-style: none;
-  padding: 0;
-}
-
-.mt100-visual li {
-  font-size: 1.05rem;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mt100-visual li:last-child {
-  border-bottom: none;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madtales AI</title>
+
+    <link rel="icon" type="image/x-icon" href="MADTALES LOGO.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-decoration"></div>
+
+    <div class="particles">
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="madtales-logo.png" alt="Madtales AI Logo" class="logo">
+            MADTALES AI
+        </a>
+
+        <button class="nav-toggle" id="navToggle">☰</button>
+
+        <div class="nav-right">
+            <div class="nav-links" id="navLinks">
+                <a href="about.html">About</a>
+      <a href="solutions.html">Industry Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="main">
+        <div class="main-content">
+            <h1 class="main-title">
+                AI, <span class="main-highlight">Reimagined</span>
+            </h1>
+            <p class="main-subtitle">
+                Minimal. Powerful. Human-centric.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>What We Do</h2>
+            <p class="section-subtitle">Three pillars. One integrated AI stack.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <h3>AI Products</h3>
+                <p>Production-ready AI applications built for real-world usage, not demos.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>Embedded & Software Services</h3>
+                <p>Edge AI, embedded systems, and full-stack software engineered for deployment.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>Talent & Consulting</h3>
+                <p>Specialized AI talent, advisory, and execution support across domains.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLAGSHIP PRODUCTS -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Flagship Products</h2>
+            <p class="section-subtitle">Focused solutions with measurable impact.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <h3>MadTales</h3>
+                <p>Audio and text intelligence platform for summarization, listening, and content compression.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>AI-Powered Fall Detection (MT100)</h3>
+                <p>Real-time edge AI system for detecting falls in healthcare and assisted environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Industries Served</h2>
+            <p class="section-subtitle">Where our systems operate in the real world.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in"><h3>Automotive</h3></div>
+            <div class="feature-card fade-in"><h3>Healthcare</h3></div>
+            <div class="feature-card fade-in"><h3>Industrial</h3></div>
+            <div class="feature-card fade-in"><h3>IoT</h3></div>
+            <div class="feature-card fade-in"><h3>Enterprise AI</h3></div>
+        </div>
+    </section>
+
+    <!-- WHY MADTALES -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Why Madtales</h2>
+            <p class="section-subtitle">Built for deployment, not experimentation.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <h3>Privacy-first AI</h3>
+                <p>Systems designed with data minimization and user control at the core.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>Edge & Real-World Expertise</h3>
+                <p>Experience deploying AI beyond the cloud, into devices and environments.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>End-to-End Ownership</h3>
+                <p>From idea to deployment — no handoffs, no fragmentation.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+        <div class="contact-card fade-in">
+            <h2>Contact</h2>
+
+            <a href="mailto:contact@madtalesai.com" class="contact-email">📧 Mail Us</a>
+<a href="https://www.linkedin.com/company/madtalesai/" class="contact-email">LinkedIn</a>
+<a href="https://www.instagram.com/madtales.ai/" class="contact-email">Instagram</a>
+<a href="https://www.facebook.com/madtalesai" class="contact-email">Facebook</a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Madtales AI.</p>
+    </footer>
+
+    <!-- JS (UNCHANGED) -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

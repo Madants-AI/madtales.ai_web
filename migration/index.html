@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madtales AI</title>
+
+    <link rel="icon" type="image/x-icon" href="MADTALES LOGO.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-decoration"></div>
+
+    <div class="particles">
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="madtales-logo.png" alt="Madtales AI Logo" class="logo">
+            MADTALES AI
+        </a>
+
+        <button class="nav-toggle" id="navToggle">☰</button>
+
+        <div class="nav-right">
+            <div class="nav-links" id="navLinks">
+                <a href="about.html">About</a>
+      <a href="solutions.html">Industry Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="main">
+        <div class="main-content">
+            <h1 class="main-title">
+                AI, <span class="main-highlight">Reimagined</span>
+            </h1>
+            <p class="main-subtitle">
+                Minimal. Powerful. Human-centric.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>What We Do</h2>
+            <p class="section-subtitle">Three pillars. One integrated AI stack.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <h3>AI Products</h3>
+                <p>Production-ready AI applications built for real-world usage, not demos.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>Embedded & Software Services</h3>
+                <p>Edge AI, embedded systems, and full-stack software engineered for deployment.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>Talent & Consulting</h3>
+                <p>Specialized AI talent, advisory, and execution support across domains.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLAGSHIP PRODUCTS -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Flagship Products</h2>
+            <p class="section-subtitle">Focused solutions with measurable impact.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <h3>MadTales</h3>
+                <p>Audio and text intelligence platform for summarization, listening, and content compression.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>AI-Powered Fall Detection (MT100)</h3>
+                <p>Real-time edge AI system for detecting falls in healthcare and assisted environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Industries Served</h2>
+            <p class="section-subtitle">Where our systems operate in the real world.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in"><h3>Automotive</h3></div>
+            <div class="feature-card fade-in"><h3>Healthcare</h3></div>
+            <div class="feature-card fade-in"><h3>Industrial</h3></div>
+            <div class="feature-card fade-in"><h3>IoT</h3></div>
+            <div class="feature-card fade-in"><h3>Enterprise AI</h3></div>
+        </div>
+    </section>
+
+    <!-- WHY MADTALES -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Why Madtales</h2>
+            <p class="section-subtitle">Built for deployment, not experimentation.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <h3>Privacy-first AI</h3>
+                <p>Systems designed with data minimization and user control at the core.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>Edge & Real-World Expertise</h3>
+                <p>Experience deploying AI beyond the cloud, into devices and environments.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>End-to-End Ownership</h3>
+                <p>From idea to deployment — no handoffs, no fragmentation.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+        <div class="contact-card fade-in">
+            <h2>Contact</h2>
+
+            <a href="mailto:contact@madtalesai.com" class="contact-email">📧 Mail Us</a>
+<a href="https://www.linkedin.com/company/madtalesai/" class="contact-email">LinkedIn</a>
+<a href="https://www.instagram.com/madtales.ai/" class="contact-email">Instagram</a>
+<a href="https://www.facebook.com/madtalesai" class="contact-email">Facebook</a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Madtales AI.</p>
+    </footer>
+
+    <!-- JS (UNCHANGED) -->
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

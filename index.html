@@ -4,53 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madtales AI</title>
-     <link rel="icon" type="image/x-icon" href="MADTALES LOGO.jpeg">
+
+    <link rel="icon" type="image/x-icon" href="MADTALES LOGO.jpeg">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
 </head>
+
 <body>
+
+    <!-- Background -->
     <div class="bg-decoration"></div>
-    
+
     <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
         <div class="particle"></div>
     </div>
-    
+
     <div class="glow-orb glow-orb-1"></div>
     <div class="glow-orb glow-orb-2"></div>
     <div class="glow-orb glow-orb-3"></div>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="#home" class="nav-brand">
-    <img src="madtales-logo.png" alt="Madtales AI Logo" class="logo">
-    MADTALES AI
-</a>
+        <a href="index.html" class="nav-brand">
+            <img src="madtales-logo.png" alt="Madtales AI Logo" class="logo">
+            MADTALES AI
+        </a>
+
         <button class="nav-toggle" id="navToggle">☰</button>
+
         <div class="nav-right">
             <div class="nav-links" id="navLinks">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#features">Features</a>
-                <a href="#vision">Vision</a>
-                <a href="#stories">Stories</a>
-                <a href="#insights">Insights</a>
-                <a href="products.html">Products</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="#contact">Contact</a>
+                <a href="about.html">About</a>
+      <a href="solutions.html">Industry Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="shipping.html">Shipping</a>
+      <a href="index.html#contact">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <!-- main Section -->
+    <!-- HERO -->
     <section id="home" class="main">
         <div class="main-content">
             <h1 class="main-title">
@@ -62,192 +61,122 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+    <!-- WHAT WE DO -->
+    <section class="section">
         <div class="section-header fade-in">
-            <h2>About Madtales AI</h2>
-            <p class="section-subtitle">The Intelligence Collective</p>
+            <h2>What We Do</h2>
+            <p class="section-subtitle">Three pillars. One integrated AI stack.</p>
         </div>
-        
-        <div class="about-tiles">
-            <div class="about-tile fade-in">
-                <div class="tile-image">
-                    <img src="madtales-logo - Copy.png" alt="Who We Are" />
-                </div>
-                <h4>Who We Are</h4>
-                <p>Madtales AI is a hub for thinkers, engineers, and dreamers. We are dedicated to the pursuit of artificial intelligence that augments, inspires, and empowers.</p>
+
+        <div class="features-grid" >
+            <div class="feature-card fade-in" >
+               <a href="products.html">
+                <h3>AI Products</h3>
+                <p>Production-ready AI applications built for real-world usage, not demos.</p>
+               </a> 
             </div>
-            
-            <div class="about-tile fade-in">
-                <div class="tile-image">
-                    <img src="data:image/jpeg;base64,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" alt="Our Mission" />
-                </div>
-                <h4>Our Mission</h4>
-                <p>We believe the future is shaped by those who ask new questions, build new tools, and imagine new realities. Our team works at the intersection of data, algorithms, and creativity to unlock the next generation of AI-driven experiences.</p>
+
+            <div class="feature-card fade-in" >
+                <a href="services.html"><h3>Embedded & Software Services</h3>
+                <p>Edge AI, embedded systems, and full-stack software engineered for deployment.</p>
+                </a>
             </div>
-            
-            <div class="about-tile fade-in">
-                <div class="tile-image">
-                    <img src="https://framerusercontent.com/images/Kif2pDqp7QTQvgJEDrQFEV2FBAY.jpg" alt="Our Approach" />
-                </div>
-                <h4>Our Approach</h4>
-                <p>We value curiosity, collaboration, and ethical innovation. Our journey is one of continuous learning and bold exploration.</p>
+
+            <div class="feature-card fade-in" >
+                <a href="solutions.html"><h3>Talent & Consulting</h3>
+                <p>Specialized AI talent, advisory, and execution support across domains.</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="section">
+    <!-- FLAGSHIP PRODUCTS -->
+    <section class="section">
         <div class="section-header fade-in">
-            <h2>AI Features</h2>
-            <p class="section-subtitle">What We Build</p>
+            <h2>Flagship Products</h2>
+            <p class="section-subtitle">Focused solutions with measurable impact.</p>
         </div>
-        
+
         <div class="features-grid">
             <div class="feature-card fade-in">
-                <h3>Real-Time AI</h3>
-                <p>Systems that sense, interpret, and act in the world—instantly.</p>
+                <a href="products.html">
+                <h3>MadTales</h3>
+                <p>Audio and text intelligence platform for summarization, listening, and content compression.</p>
+                </a>
             </div>
-            
+
             <div class="feature-card fade-in">
-                <h3>Generative Models</h3>
-                <p>AI that creates: text, images, music, and more—fueling creativity and innovation.</p>
+                <a href="products.html">
+                <h3>AI-Powered Fall Detection (MT100)</h3>
+                <p>Real-time edge AI system for detecting falls in healthcare and assisted environments.</p>
+                </a>
             </div>
-            
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Industries Served</h2>
+            <p class="section-subtitle">Where our systems operate in the real world.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in"><h3>Automotive</h3></div>
+            <div class="feature-card fade-in"><h3>Healthcare</h3></div>
+            <div class="feature-card fade-in"><h3>Industrial</h3></div>
+            <div class="feature-card fade-in"><h3>IoT</h3></div>
+            <div class="feature-card fade-in"><h3>Enterprise AI</h3></div>
+        </div>
+    </section>
+
+    <!-- WHY MADTALES -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2>Why Madtales</h2>
+            <p class="section-subtitle">Built for deployment, not experimentation.</p>
+        </div>
+
+        <div class="features-grid">
             <div class="feature-card fade-in">
-                <h3>Conversational AI</h3>
-                <p>Natural, adaptive dialogue systems for support, learning, and connection.</p>
+                <h3>Privacy-first AI</h3>
+                <p>Systems designed with data minimization and user control at the core.</p>
             </div>
-            
+
             <div class="feature-card fade-in">
-                <h3>Vision & Perception</h3>
-                <p>AI that sees, understands, and interacts with the environment.</p>
+                <h3>Edge & Real-World Expertise</h3>
+                <p>Experience deploying AI beyond the cloud, into devices and environments.</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <h3>End-to-End Ownership</h3>
+                <p>From idea to deployment — no handoffs, no fragmentation.</p>
             </div>
         </div>
     </section>
 
-    <!-- Vision Section -->
-    <section id="vision" class="section vision">
-        <div class="section-header fade-in">
-            <h2>Our Vision</h2>
-            <p class="section-subtitle">A New Era of Intelligence</p>
-        </div>
-        
-        <div class="vision-grid">
-            <div class="vision-item fade-in">
-                <div class="vision-icon">🤝</div>
-                <h3>Human-Centric</h3>
-                <p>We build AI that amplifies human potential and brings new meaning to technology.</p>
-            </div>
-            
-            <div class="vision-item fade-in">
-                <div class="vision-icon">🔍</div>
-                <h3>Transparent</h3>
-                <p>Our systems are designed to be open, explainable, and trustworthy.</p>
-            </div>
-            
-            <div class="vision-item fade-in">
-                <div class="vision-icon">⚡</div>
-                <h3>Adaptive</h3>
-                <p>We create systems that learn, adapt, and evolve with the world around them.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Stories Section -->
-    <section id="stories" class="section stories">
-        <div class="section-header fade-in">
-            <h2>AI Stories</h2>
-            <p class="section-subtitle">Intelligence in Action</p>
-        </div>
-        
-        <div class="stories-grid">
-            <div class="story-card fade-in">
-                <div class="story-header">
-                    <div class="story-icon">🏙️</div>
-                </div>
-                <h3>Urban Mobility</h3>
-                <p>Adaptive AI reimagines how cities move, optimizing flow and reducing congestion.</p>
-            </div>
-            
-            <div class="story-card fade-in">
-                <div class="story-header">
-                    <div class="story-icon">🌐</div>
-                </div>
-                <h3>Network Intelligence</h3>
-                <p>Self-learning networks that optimize and heal in real time, powering the digital world.</p>
-            </div>
-            
-            <div class="story-card fade-in">
-                <div class="story-header">
-                    <div class="story-icon">🎯</div>
-                </div>
-                <h3>Personalization</h3>
-                <p>Deep learning delivers experiences tailored to every individual, at scale.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Insights Section -->
-    <section id="insights" class="section insights">
-        <div class="section-header fade-in">
-            <h2>Insights</h2>
-            <p class="section-subtitle">Reflections on Intelligence</p>
-        </div>
-        
-        <div class="insights-grid">
-            <div class="insight-card fade-in">
-                <div class="insight-header">
-                    <div class="insight-icon">🎨</div>
-                </div>
-                <h3>AI & Creativity</h3>
-                <p>Exploring the intersection of artificial intelligence and human imagination.</p>
-            </div>
-            
-            <div class="insight-card fade-in">
-                <div class="insight-header">
-                    <div class="insight-icon">⚖️</div>
-                </div>
-                <h3>Ethics in AI</h3>
-                <p>How do we build systems that are fair, transparent, and trustworthy?</p>
-            </div>
-            
-            <div class="insight-card fade-in">
-                <div class="insight-header">
-                    <div class="insight-icon">🤝</div>
-                </div>
-                <h3>Collaboration</h3>
-                <p>Human-AI partnerships that unlock new forms of progress and understanding.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- CONTACT -->
     <section id="contact" class="section contact">
         <div class="contact-card fade-in">
             <h2>Contact</h2>
-            <a href="mailto:contact@madtalesai.com" class="contact-email">
-                📧 Mail Us
-            </a>
-            <a href="https://www.linkedin.com/company/madtalesai/" class="contact-email">
-                LinkedIn
-            </a>
-            <a href="https://www.instagram.com/madtales.ai/" class="contact-email">
-                Instagram
-            </a>
-            <!-- <p style="margin-top: 2rem; color: var(--text-muted);">Email Us</p> -->
+
+            <a href="mailto:contact@madtalesai.com" class="contact-email">📧 Mail Us</a>
+<a href="https://www.linkedin.com/company/madtalesai/" class="contact-email">LinkedIn</a>
+<a href="https://www.instagram.com/madtales.ai/" class="contact-email">Instagram</a>
+<a href="https://www.facebook.com/madtalesai" class="contact-email">Facebook</a>
+
         </div>
-        
     </section>
-    
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Madtales AI.</p>
-    </footer>
+    <!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 Madtales AI Pvt Ltd</p>
+</footer>
 
+    <!-- JS (UNCHANGED) -->
     <script>
-        // Mobile Navigation
         const navToggle = document.getElementById('navToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -255,45 +184,30 @@
             navLinks.classList.toggle('open');
         });
 
-        // Close mobile menu when clicking links
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
             });
         });
 
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        // Observe fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+
 </body>
 </html>

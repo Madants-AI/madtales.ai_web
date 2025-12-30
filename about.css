@@ -1,0 +1,235 @@
+/* =========================
+   DESIGN SYSTEM
+   ========================= */
+
+:root {
+  --primary: #8b5cf6;
+  --accent: #06b6d4;
+  --text: #ffffff;
+  --text-muted: #94a3b8;
+  --bg-primary: #0f172a;
+  --bg-card: #334155;
+  --border-light: rgba(71, 85, 105, 0.3);
+  --gradient-primary: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  --gradient-card: linear-gradient(145deg, rgba(139,92,246,0.1), rgba(6,182,212,0.05));
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =========================
+   BACKGROUND EFFECTS
+   ========================= */
+
+.bg-decoration {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(139,92,246,0.12), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6,182,212,0.1), transparent 50%);
+  z-index: -2;
+}
+
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(139,92,246,0.7);
+  border-radius: 50%;
+  animation: float 20s linear infinite;
+}
+
+.particle:nth-child(2) { left: 30%; animation-delay: -5s; }
+.particle:nth-child(3) { left: 50%; animation-delay: -10s; }
+.particle:nth-child(4) { left: 70%; animation-delay: -15s; }
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 0; }
+  10% { opacity: 0.6; }
+  to { transform: translateY(-20vh); opacity: 0; }
+}
+
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+.glow-orb-1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(139,92,246,0.4);
+  top: 20%;
+  right: 10%;
+}
+
+.glow-orb-2 {
+  width: 240px;
+  height: 240px;
+  background: rgba(6,182,212,0.3);
+  bottom: 25%;
+  left: 15%;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15,23,42,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 1000;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-brand .logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.nav-links a {
+  margin-left: 1.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.main {
+  min-height: 60vh;
+  padding: 140px 6vw 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.main-highlight {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-subtitle {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+/* =========================
+   ABOUT CONTENT
+   ========================= */
+
+.about-section {
+  padding: 80px 6vw;
+}
+
+.about-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 3rem;
+}
+
+.about-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(12px);
+  transition: transform 0.35s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-card p {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

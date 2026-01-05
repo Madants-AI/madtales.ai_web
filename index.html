@@ -29,8 +29,7 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <img src="madtales-logo.png" alt="Madtales AI Logo" class="logo">
-            MADTALES AI
+            <img src="app_icon.png" alt="Madtales AI Logo" class="logo">
         </a>
 
         <button class="nav-toggle" id="navToggle">☰</button>
@@ -50,7 +49,7 @@
     </nav>
 
     <!-- HERO -->
-    <section id="home" class="main">
+    <!-- <section id="home" class="main">
         <div class="main-content">
             <h1 class="main-title">
                 AI, <span class="main-highlight">Reimagined</span>
@@ -59,10 +58,98 @@
                 Minimal. Powerful. Human-centric.
             </p>
         </div>
-    </section>
+    </section> -->
+    <section id="home" class="hero-carousel">
+<div class="hero-header fade-in">
+  <h1 class="hero-title">
+    Three pillars. <span class="hero-highlight">Built to deliver.</span>
+  </h1>
+</div>
+
+
+<div class="hero-carousel-container">
+    <div class="hero-carousel-track">
+
+        <!-- SLIDE 1 -->
+        <div class="hero-carousel-slide active">
+            <div class="hero-slide-content">
+                <div class="hero-slide-text">
+                    <h1>Madtales Mobile App</h1>
+                    <p class="hero-slide-lead">
+                        Turn documents into immersive AI audio stories
+                    </p>
+                    <p>
+                        One of the most efficient and affordable ways to create immersive AI audiobooks — with a clean, intuitive interface designed for effortless listening.
+                    </p>
+                    <p>
+                        Designed for unlimited listening, transparent pricing, and real-world use — from books and study material to articles and everyday documents.
+                    </p>
+                </div>
+
+                <div class="hero-slide-visual">                   <img src="carousal1.png" alt="Madtales App Screenshot">
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="hero-carousel-slide">
+            <div class="hero-slide-content">
+                <div class="hero-slide-text">
+                    <h1>AI, Edge & Embedded Engineering Services</h1>
+                    <p class="hero-slide-lead">
+                        MadTales AI delivers production-ready services across AI, edge, wireless, and embedded engineering.
+                    </p>
+                    <p>
+                        We build intelligent systems that perform where it matters most — on devices, at the edge, and across connected environments. From embedded AI for vision, audio, and sensor data to low-power, real-time deployments and wireless-aware system design, our work is built for reliability and scale. 
+                    </p>
+                    <p>
+                        Backed by strong engineering and clear execution, we help teams move from concept to production with AI solutions designed for real-world use.
+                    </p>
+                </div>
+
+                <div class="hero-slide-visual">
+                    <img src="carousal2.png" alt="AI & Embedded Engineering">
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="hero-carousel-slide">
+            <div class="hero-slide-content">
+                <div class="hero-slide-text">
+                    <h1>Talent & <br>Hiring Services</h1>
+                    <p class="hero-slide-lead">
+                        MadTales helps companies hire top engineering talent through a flexible, end-to-end hiring model. 
+                    </p>
+                    <p>
+                        We support the entire recruitment lifecycle — from candidate sourcing and technical screening to interviews and onboarding support. Our staffing models adapt to your needs, whether permanent, contract, or project-based hiring. 
+                    </p>
+                    <p>
+                        With global and regional reach, we help organizations find the right local or remote talent for high-demand technology roles, including edge, wireless, embedded, AI, and core engineering functions.
+                    </p>
+                </div>
+
+                <div class="hero-slide-visual">
+                    <img src="carousal3.png" alt="Talent & Hiring">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="hero-carousel-dots">
+        <span class="hero-dot active"></span>
+        <span class="hero-dot"></span>
+        <span class="hero-dot"></span>
+    </div>
+
+</section>
+
 
     <!-- WHAT WE DO -->
-    <section class="section">
+    <!-- <section class="section">
         <div class="section-header fade-in">
             <h2>What We Do</h2>
             <p class="section-subtitle">Three pillars. One integrated AI stack.</p>
@@ -88,10 +175,10 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- FLAGSHIP PRODUCTS -->
-    <section class="section">
+    <!-- <section class="section">
         <div class="section-header fade-in">
             <h2>Flagship Products</h2>
             <p class="section-subtitle">Focused solutions with measurable impact.</p>
@@ -112,7 +199,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- INDUSTRIES -->
     <section class="section">
@@ -162,7 +249,7 @@
         <div class="contact-card fade-in">
             <h2>Contact</h2>
 
-            <a href="mailto:contact@madtalesai.com" class="contact-email">📧 Mail Us</a>
+            <a href="mailto:contact@madtalesai.com" class="contact-email">Mail Us</a>
 <a href="https://www.linkedin.com/company/madtalesai/" class="contact-email">LinkedIn</a>
 <a href="https://www.instagram.com/madtales.ai/" class="contact-email">Instagram</a>
 <a href="https://www.facebook.com/madtalesai" class="contact-email">Facebook</a>
@@ -207,6 +294,31 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const track = document.querySelector('.carousel-track');
+    let index = 0;
+
+    function showSlide(i) {
+        slides.forEach((slide, idx) => {
+            slide.classList.toggle('active', idx === i);
+            dots[idx].classList.toggle('active', idx === i);
+        });
+        track.style.transform = `translateX(-${i * 100}%)`;
+        index = i;
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => showSlide(i));
+    });
+
+    // Auto slide (optional)
+    setInterval(() => {
+        showSlide((index + 1) % slides.length);
+    }, 7000);
+
+
     </script>
 
 </body>
